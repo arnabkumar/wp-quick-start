@@ -1,0 +1,707 @@
+/*! HTML5 Boilerplate v4.3.0 | MIT License | http://h5bp.com/ */
+
+/*
+ * What follows is the result of much research on cross-browser styling.
+ * Credit left inline and big thanks to Nicolas Gallagher, Jonathan Neal,
+ * Kroc Camen, and the H5BP dev community and team.
+ */
+
+/* ==========================================================================
+   Base styles: opinionated defaults
+   ========================================================================== */
+
+html,
+button,
+input,
+select,
+textarea {
+    color: #222;
+}
+
+html {
+    font-size: 1em;
+    line-height: 1.4;
+}
+
+/*
+ * Remove text-shadow in selection highlight: h5bp.com/i
+ * These selection rule sets have to be separate.
+ * Customize the background color to match your design.
+ */
+
+::-moz-selection {
+    background: #b3d4fc;
+    text-shadow: none;
+}
+
+::selection {
+    background: #b3d4fc;
+    text-shadow: none;
+}
+
+/*
+ * A better looking default horizontal rule
+ */
+
+hr {
+    display: block;
+    height: 1px;
+    border: 0;
+    border-top: 1px solid #ccc;
+    margin: 1em 0;
+    padding: 0;
+}
+
+/*
+ * Remove the gap between images, videos, audio and canvas and the bottom of
+ * their containers: h5bp.com/i/440
+ */
+
+audio,
+canvas,
+img,
+video {
+    vertical-align: middle;
+}
+
+/*
+ * Remove default fieldset styles.
+ */
+
+fieldset {
+    border: 0;
+    margin: 0;
+    padding: 0;
+}
+
+/*
+ * Allow only vertical resizing of textareas.
+ */
+
+textarea {
+    resize: vertical;
+}
+
+/* ==========================================================================
+   Browse Happy prompt
+   ========================================================================== */
+
+.browsehappy {
+    margin: 0.2em 0;
+    background: #ccc;
+    color: #000;
+    padding: 0.2em 0;
+}
+
+/* ==========================================================================
+   Author's custom styles
+   ========================================================================== */
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* ==========================================================================
+   Helper classes
+   ========================================================================== */
+
+/*
+ * Image replacement
+ */
+
+.ir {
+    background-color: transparent;
+    border: 0;
+    overflow: hidden;
+    /* IE 6/7 fallback */
+    *text-indent: -9999px;
+}
+
+.ir:before {
+    content: "";
+    display: block;
+    width: 0;
+    height: 150%;
+}
+
+/*
+ * Hide from both screenreaders and browsers: h5bp.com/u
+ */
+
+.hidden {
+    display: none !important;
+    visibility: hidden;
+}
+
+/*
+ * Hide only visually, but have it available for screenreaders: h5bp.com/v
+ */
+
+.visuallyhidden {
+    border: 0;
+    clip: rect(0 0 0 0);
+    height: 1px;
+    margin: -1px;
+    overflow: hidden;
+    padding: 0;
+    position: absolute;
+    width: 1px;
+}
+
+/*
+ * Extends the .visuallyhidden class to allow the element to be focusable
+ * when navigated to via the keyboard: h5bp.com/p
+ */
+
+.visuallyhidden.focusable:active,
+.visuallyhidden.focusable:focus {
+    clip: auto;
+    height: auto;
+    margin: 0;
+    overflow: visible;
+    position: static;
+    width: auto;
+}
+
+/*
+ * Hide visually and from screenreaders, but maintain layout
+ */
+
+.invisible {
+    visibility: hidden;
+}
+
+/*
+ * Clearfix: contain floats
+ *
+ * For modern browsers
+ * 1. The space content is one way to avoid an Opera bug when the
+ *    `contenteditable` attribute is included anywhere else in the document.
+ *    Otherwise it causes space to appear at the top and bottom of elements
+ *    that receive the `clearfix` class.
+ * 2. The use of `table` rather than `block` is only necessary if using
+ *    `:before` to contain the top-margins of child elements.
+ */
+
+.clearfix:before,
+.clearfix:after {
+    content: " "; /* 1 */
+    display: table; /* 2 */
+}
+
+.clearfix:after {
+    clear: both;
+}
+
+/*
+ * For IE 6/7 only
+ * Include this rule to trigger hasLayout and contain floats.
+ */
+
+.clearfix {
+    *zoom: 1;
+}
+
+/* ==========================================================================
+   EXAMPLE Media Queries for Responsive Design.
+   These examples override the primary ('mobile first') styles.
+   Modify as content requires.
+   ========================================================================== */
+
+@media only screen and (min-width: 35em) {
+    /* Style adjustments for viewports that meet the condition */
+}
+
+@media print,
+       (-o-min-device-pixel-ratio: 5/4),
+       (-webkit-min-device-pixel-ratio: 1.25),
+       (min-resolution: 120dpi) {
+    /* Style adjustments for high resolution devices */
+}
+
+/* ==========================================================================
+   Print styles.
+   Inlined to avoid required HTTP connection: h5bp.com/r
+   ========================================================================== */
+
+@media print {
+    * {
+        background: transparent !important;
+        color: #000 !important; /* Black prints faster: h5bp.com/s */
+        box-shadow: none !important;
+        text-shadow: none !important;
+    }
+
+    a,
+    a:visited {
+        text-decoration: underline;
+    }
+
+    a[href]:after {
+        content: " (" attr(href) ")";
+    }
+
+    abbr[title]:after {
+        content: " (" attr(title) ")";
+    }
+
+    /*
+     * Don't show links for images, or javascript/internal links
+     */
+
+    .ir a:after,
+    a[href^="javascript:"]:after,
+    a[href^="#"]:after {
+        content: "";
+    }
+
+    pre,
+    blockquote {
+        border: 1px solid #999;
+        page-break-inside: avoid;
+    }
+
+    thead {
+        display: table-header-group; /* h5bp.com/t */
+    }
+
+    tr,
+    img {
+        page-break-inside: avoid;
+    }
+
+    img {
+        max-width: 100% !important;
+    }
+
+    @page {
+        margin: 0.5cm;
+    }
+
+    p,
+    h2,
+    h3 {
+        orphans: 3;
+        widows: 3;
+    }
+
+    h2,
+    h3 {
+        page-break-after: avoid;
+    }
+}
+
+
+
+
+
+
+
+
+
+
+                                           /* Custom Styles */
+* {margin:0;padding:0}
+body {font-family:arial;font-size:14px;line-height:18px;color:#444;position:relative;}
+a {text-decoration:none;color:#000}
+a:hover {text-decoration:none}
+/* this code for bootstrap a:visited, a:focus, a:active none */
+a:visited, a:focus, a:active{text-decoration:none;outline:none;}
+
+img {border:none;max-width:100%;height:auto}
+input[type=text], input[type=email], textarea {border:1px solid #ddd;padding:5px;}
+input[type=submit] {border:none;padding:5px 15px;background:#444;color:#fff;cursor:pointer}
+ul, ol {margin:15px;margin-right:0}
+.fix {overflow:hidden}
+
+/* This class and code for also wordpress align */
+.alignleft {float:left;margin-right:10px}
+.alignright {float:right;margin-left:10px}
+.aligncenter {display:block;margin:0 auto}
+.floatleft {float:left}
+.floatright {float:right}
+.container {transition: all 0.9s ease 0s;-moz-transition: all 0.9s ease 0s;-webkit-transition: all 0.9s ease 0s;-o-transition: all 0.9s ease 0s;}
+/*This Code for Responsive Video*/
+object,embed {position: absolute; top: 0; left: 0; width: 100%; height: 100%;}
+
+/* This Code For Only First And Last Element  */
+.firstelement{margin-left:0px;}
+.lastlement{margin-right:0px;}
+
+/* header.php  */
+
+.header_area{background:#fbfbfb;}
+
+
+.header_footer_area{background:#3fbabe;}
+
+/* footer.php  */
+.footer_area{background: none repeat scroll 0 0 #000;
+color: #ffffff;
+height: 100px;
+margin-top: 10px;}
+.footer_area a{color:#ffffff;}
+
+
+
+/* Welcome welcome-template.php slider  */
+.front_slider_area.container-fluid {
+  overflow: hidden;
+  width: 100%;
+  padding-left:0;padding-right:0;
+}
+
+
+/* archive_t style*/
+h2.archive_t{color:#3aa2a5;}
+
+
+
+/*wordpress plugin wp-pagenavi style*/
+.wp-pagenavi span.pages{ background: none repeat scroll 0 0 #f0f0f0;
+display: inline-block;
+min-width: 12px;
+padding: 10px 15px;
+position: relative;
+text-align: center;color:#992923;}
+.wp-pagenavi span.current {
+  background: none repeat scroll 0 0 #992923;
+border-top: 5px solid #343030;
+color: #fff;
+display: inline-block;
+font-weight: bold;
+min-width: 12px;
+padding: 10px 15px;
+text-align: center;
+text-decoration: none;
+}
+.wp-pagenavi a, .wp-pagenavi span {
+  background: none repeat scroll 0 0 #f0f0f0;
+display: inline-block;
+min-width: 12px;
+padding: 10px 15px;
+position: relative;
+text-align: center;
+}
+.wp-pagenavi a:hover, .wp-pagenavi span:hover {
+ border-top: 5px solid #343030;
+  text-decoration: none;
+  display: inline-block;
+  min-width: 12px;
+  text-align: center;
+  padding: 10px 15px;
+}
+.wp-pagenavi a.page .smaller{color:#992923}
+.wp-pagenavi a.page .larger{color:#992923}
+.wp-pagenavi a.previouspostslink{color:#992923}
+.wp-pagenavi a.nextpostslink{color:#992923}
+
+
+/*wordpress widget tag cloud styles*/
+
+div.tagcloud a{background: none repeat scroll 0 0 #313131;
+color: #ffffff;
+display: inline-block;
+margin: 0 0 3px -1px;
+padding: 5px 15px;font-size: 8pt!important;}
+div.tagcloud a:hover{background: none repeat scroll 0 0 #ef4a43;
+color: #fff;}
+
+/*wordpress widget Categories styles*/
+div.well {
+  overflow: hidden;
+}
+div.well > ul {
+  padding: 0;
+  margin: 0;
+  list-style: none;
+}
+
+div.well > ul li.cat-item {
+ float: left;
+margin-top: -10px;
+margin-right: 5px;
+}
+div.well > ul li.cat-item a {
+  background: none repeat scroll 0 0 #313131;
+color: #ffffff;
+display: inline-block;
+font-size: 8pt !important;
+padding: 3px;
+}
+div.well > ul li.cat-item a:hover {
+  background: none repeat scroll 0 0 #ef4a43;
+color: #fff;
+}
+
+
+
+
+
+/*wordpress widget search styles*/
+form.searchform input[type="submit"] {
+  background: none;
+  border: medium none;
+  color: inherit;
+  cursor: pointer;
+  padding: 5px 15px;
+   margin-top: 6px;
+}
+
+ 
+h2.r_p_h2 {
+  margin-left: 56px;
+}
+
+
+/*wordpress 404 styles*/
+
+
+.four_zero_four, .internal-page {background: none repeat scroll 0 0 #fff;
+margin-top: 70px;
+padding: 20px;}
+.four_zero_message {text-align:center}
+.four_zero_message h1{font-size: 170px;
+line-height: 110px;
+margin-top: 40px;}
+.four_zero_message h1 span{display: block;
+font-size: 65px;}
+.four_zero_message p{}
+.four_zero_searchform {border: 1px solid #ddd;
+padding: 20px;
+text-align: center;}
+.four_zero_resources {margin-top: 50px;}
+.four_zero_resources h2{font-size:25px}
+.four_zero_resources ol {margin: 0;
+padding: 15px;}
+.four_zero_resources ol li{padding: 5px 0;}
+
+.four_zero_searchform form#searchform input[type="submit"] {top:3px}
+
+/* wp Recent Posts widgets styles*/
+div.well > ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+div.well > ul > li {
+  color: #419fa0;
+float: none;
+padding: 7px 0;
+}
+div.well > ul > li > a {
+  color: #673232;
+}
+
+/* wp comment styles */
+/* Comment form */
+#respond {
+	margin-top: 48px;
+	margin-top: 3.428571429rem;
+}
+#respond h3#reply-title {
+	font-size: 16px;
+	font-size: 1.142857143rem;
+	line-height: 1.5;
+}
+#respond h3#reply-title #cancel-comment-reply-link {
+	margin-left: 10px;
+	margin-left: 0.714285714rem;
+	font-weight: normal;
+	font-size: 12px;
+	font-size: 0.857142857rem;
+}
+#respond form {
+	margin: 24px 0;
+	margin: 1.714285714rem 0;
+}
+#respond form p {
+	margin: 11px 0;
+	margin: 0.785714286rem 0;
+}
+#respond form p.logged-in-as {
+	margin-bottom: 24px;
+	margin-bottom: 1.714285714rem;
+}
+#respond form label {
+	display: block;
+	line-height: 1.714285714;
+}
+#respond form input[type="text"],
+#respond form textarea {
+	-moz-box-sizing: border-box;
+	box-sizing: border-box;
+	font-size: 12px;
+	font-size: 0.857142857rem;
+	line-height: 1.714285714;
+	padding: 10px;
+	padding: 0.714285714rem;
+	width: 100%;
+}
+#respond form p.form-allowed-tags {
+	margin: 0;
+	font-size: 12px;
+	font-size: 0.857142857rem;
+	line-height: 2;
+	color: #5e5e5e;
+}
+.required {
+	color: red;
+}
+
+form#commentform{
+margin:0;
+}
+.comments-area{
+}
+.comments-area{
+background: none repeat scroll 0 0 #ffffff;
+margin-bottom: 25px;
+margin-top: 40px;
+padding: 0;
+}
+.comments-title{
+font-size:18px;
+margin:0;
+color:#010101;
+}
+.commentlist{
+list-style: outside none none;
+margin: 35px 0 0;
+padding: 0;
+}
+.commentlist li{
+border-bottom:1px solid #E9E9E9;
+margin-bottom:25px;
+padding-bottom:25px;
+}
+.commentlist li:last-child{
+margin-bottom:0;
+padding-bottom:0;
+border-bottom:0px solid;
+}
+.comment{
+}
+.comment-meta{
+}
+.avatar{
+float: left;
+height: 80px;
+margin-bottom: 15px;
+margin-right: 15px;
+width: 80px;
+}
+cite.fn{
+display:block;
+}
+cite.fn span{
+-webkit-border-radius:5px;
+-moz-border-radius:5px;
+border-radius:5px;
+color:#FFFFFF;
+display:inline-block;
+font-family:'Roboto',sans-serif;
+font-size:12px;
+margin-left:5px;
+padding:2px 10px;
+}
+a time, a.comment-reply-link{
+color:#999999;
+display:inline-block;
+font-size:12px;
+margin:5px 0;
+position:relative;
+}
+a.comment-reply-link:before{
+position:absolute;
+left:0;
+top:0;
+content:"-";
+}
+a.comment-reply-link{
+padding-left:10px;
+margin-left:10px;
+}
+.comment-content{
+color:#777777;
+padding-left:105px;
+}
+.reply{
+}
+.comment-reply-link{
+}
+.children{
+margin-left:68px;
+font-size:100%;
+}
+.children li{
+border-bottom:0 solid;
+border-top:1px solid #DDDDDD;
+list-style:none outside none;
+margin-bottom:0;
+margin-top:25px;
+padding:25px 0 0;
+}
+.comment-notes{
+}
+
+.required{
+
+}
+.comment-notes{
+margin-top:15px;
+margin-bottom:25px;
+}
+
+
+/*wordpress widget recent comment styles*/
+ul#recentcomments{}
+ul#recentcomments li.recentcomments{padding: 13px 0px;}
+ul#recentcomments li.recentcomments span.comment-author-link{}
+
+/*wordpress widget menu styles*/
+div.well ul.menu{list-style:none;margin:0;padding:0;}
+div.well ul.menu li.menu-item{
+  float: left;
+  padding: 0 7px;
+}
+
+/*wordpress widget page styles*/
+div.well li.page_item{
+  float: left;
+  padding: 0 7px;
+}
+
+
+/* calendar widget */
+.widget_calendar {float: left;}
+#wp-calendar {width: 100%; background:#DFE8EE; }
+#wp-calendar caption { border-top:1px dotted #3F89E2; text-align: right; font-weight:bold; color: #333; font-size: 12px; margin-top:-10px; padding:10px 10px 0 0; padding-bottom: 15px;  background:#CFD3D6;}
+#wp-calendar thead { font-size: 10px; }
+#wp-calendar thead th { padding-bottom: 10px;
+text-align: center; }
+#wp-calendar tbody { color: #aaa; }
+#wp-calendar tbody td { background: #f5f5f5; border: 1px solid #fff; text-align: center; padding:8px;}
+#wp-calendar tbody td:hover { background: #fff; }
+#wp-calendar tbody .pad { background: none; }
+#wp-calendar tfoot #next { font-size: 10px; text-transform: uppercase; text-align: right; }
+#wp-calendar tfoot #prev { font-size: 10px; text-transform: uppercase; padding-top: 0px; }
+#wp-calendar thead th {padding-bottom: 10px; text-align: center;}
+
+
+
+
+
+
